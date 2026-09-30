@@ -449,13 +449,16 @@ button, input, select { font: inherit; }
 }
 
 .tabs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
     margin-top: 24px;
     border-bottom: 1px solid var(--border);
 }
 
 .tabs a {
+    display: flex;
+    justify-content: center;
     padding: 0 0 11px;
     color: var(--muted);
     font-family: Arial, sans-serif;
@@ -749,6 +752,10 @@ button, input, select { font: inherit; }
     .hero::after { inset: auto -20% -70% 10%; }
 }
 
+@media (max-width: 520px) {
+    .tabs { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 455px) {
     .unimportant-455 { display: none; }
     .stat-abilities { grid-template-columns: repeat(3, 1fr); }
@@ -766,4 +773,5 @@ button, input, select { font: inherit; }
 @media (max-width: 360px) {
     .hero { padding: 12px; }
     .unimportant-360 { display: none; }
+    .tabs { grid-template-columns: repeat(1, 1fr); }
 }
