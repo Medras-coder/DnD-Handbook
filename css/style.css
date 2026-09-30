@@ -51,7 +51,7 @@ button, input, select { font: inherit; }
 .sidebar {
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 100dvh;
     padding: 24px 16px;
     background: #0a1119;
     border-right: 1px solid var(--border);
@@ -712,8 +712,18 @@ button, input, select { font: inherit; }
     .category-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 830px) {
+    .header-with-image { flex-direction: column; }
+    .header-image { max-width: 555px; }
+    .header-image img {
+        height: 100%;
+        width: 100%;
+        max-height: 671px;
+        max-width: 503px;
+    }
+}
+
 @media (max-width: 790px) {
-    body { overflow-y: hidden; }
     .news-column { display: none; }
     .nav p { display: none; }
     .sidebar { padding: 24px 8px; }
@@ -722,6 +732,10 @@ button, input, select { font: inherit; }
     .logo-title { font-size: 18px; }
     .logo-subtitle { font-size: 5px; }
     .hero::after { inset: auto -10% -70% 10%; }
+}
+
+@media (max-width: 680px) {
+    .two-col { display: flex; flex-direction: column; }
 }
 
 @media (max-width: 600px) {
@@ -737,6 +751,7 @@ button, input, select { font: inherit; }
 
 @media (max-width: 455px) {
     .unimportant-455 { display: none; }
+    .stat-abilities { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 441px) {
@@ -750,4 +765,5 @@ button, input, select { font: inherit; }
 
 @media (max-width: 360px) {
     .hero { padding: 12px; }
+    .unimportant-360 { display: none; }
 }
