@@ -786,11 +786,11 @@ button, input, select { font: inherit; }
 
 @media (max-width: 430px) {
     .hero { padding: 28px; }
+    .unimportant-430 { display: none; }
     .hero::after { inset: auto -15% -72% 10%; }
 }
 
 @media (max-width: 360px) {
     .hero { padding: 12px; }
-    .unimportant-360 { display: none; }
     .tabs { grid-template-columns: repeat(1, 1fr); }
 }
