@@ -45,7 +45,7 @@ button, input, select { font: inherit; }
 .site-shell {
     display: grid;
     grid-template-columns: 205px minmax(0, 1fr);
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .sidebar {
@@ -174,6 +174,20 @@ button, input, select { font: inherit; }
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.link:hover { color: var(--gold-soft); }
 
 .panel {
     background: linear-gradient(145deg, var(--gradient-2-start), var(--gradient-2-end));
@@ -575,7 +589,7 @@ button, input, select { font: inherit; }
 
 .table th,
 .table td {
-    padding: 6px 8px;
+    padding: 12px 14px;
     border-bottom: 1px solid var(--border);
     text-align: left;
 }
@@ -655,6 +669,7 @@ button, input, select { font: inherit; }
     color: var(--muted);
     font-family: Arial, sans-serif;
 }
+
 .in-text-link { 
     color: var(--gold-soft);
     font-weight: 600;
@@ -735,6 +750,10 @@ button, input, select { font: inherit; }
     .logo-title { font-size: 18px; }
     .logo-subtitle { font-size: 5px; }
     .hero::after { inset: auto -10% -70% 10%; }
+    .table th, table td, .glossary-table th, .glossary-table td { 
+        font-size: 10px;
+        padding: 6px 8px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -754,10 +773,10 @@ button, input, select { font: inherit; }
 
 @media (max-width: 520px) {
     .tabs { grid-template-columns: repeat(2, 1fr); }
+    .unimportant-455 { display: none; }
 }
 
 @media (max-width: 455px) {
-    .unimportant-455 { display: none; }
     .stat-abilities { grid-template-columns: repeat(3, 1fr); }
 }
 
