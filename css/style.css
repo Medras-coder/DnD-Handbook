@@ -773,7 +773,7 @@ button, input, select { font: inherit; }
 
 @media (max-width: 520px) {
     .tabs { grid-template-columns: repeat(2, 1fr); }
-    .unimportant-455 { display: none; }
+    .unimportant-520 { display: none; }
 }
 
 @media (max-width: 455px) {
